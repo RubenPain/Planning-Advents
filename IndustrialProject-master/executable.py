@@ -100,7 +100,7 @@ class QtSaisie(QFrame):
         dialog = QFileDialog()
 
         filename = dialog.getOpenFileName(None, 'Import Image ', "", "jpg data files (*.jpg)")
-        Skew.__init__(Skew, filename)
+        #Skew.__init__(Skew, filename)
         Find_object.__init__(Find_object, filename, csvname)
 
 
