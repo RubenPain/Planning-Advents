@@ -25,6 +25,13 @@ Le fichier `main.py` est le corps du programme :
   - Un input pour récupérer le nom du fichier csv de sortie souhaité à transmettre au main.py
   - Un bouton pour upload qui ouvre un explorateur de fichier, afin de choisir l'image que l'on veut analyser pour la transmettre au main.py 
   - Un bouton pour quitter
+
+La reconnaissance des caractères manuscrits n'est pas parfait, 81% sur ma photo test.
   
-  **PS :**
+Instaurer des **règles d'or** pour le tableau sera quelque chose d'important :
+ - Bien prendre la photo (cadrage, luminosité)
+ - Bien placer les formes droites, éviter de les coller
+ - ...
+
+**PS :**
   _Wallah c'est moche et chiant à faire un README go faire des WATCHME (nouveau concept)_
