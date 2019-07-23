@@ -4,8 +4,7 @@
 import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from Hsv_form_detection_final import Find_object
-from correct_skew import Skew
+from main import CSV
 
 
 # L'application Qt
@@ -68,7 +67,7 @@ class QtSaisie(QFrame):
         layoutNom = QGridLayout()
         layoutNom.setMargin(0)
         layoutNom.setSpacing(0)
-        labelNom = QLabel("Nom du fichier")
+        labelNom = QLabel("Nom du fichier csv de sortie")
         self.__editNom = QLineEdit()
         self.connect(self.__editNom, SIGNAL("textChanged(const QString &)"), self.__slotEdited)
         self.__action = QPushButton("Upload")
@@ -100,8 +99,10 @@ class QtSaisie(QFrame):
         dialog = QFileDialog()
 
         filename = dialog.getOpenFileName(None, 'Import Image ', "", "jpg data files (*.jpg)")
-        #Skew.__init__(Skew, filename)
-        Find_object.__init__(Find_object, filename, csvname)
+
+        CSV.load(CSV, filename)
+        CSV.write(CSV, csvname)
+        QCoreApplication.exit(0)
 
 
 # Pour lancer le programme

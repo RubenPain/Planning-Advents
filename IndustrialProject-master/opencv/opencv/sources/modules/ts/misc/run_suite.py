@@ -112,7 +112,7 @@ class TestSuite(object):
                 executable = path
                 if not self.tryCommand([executable, '--version'], workingDir):
                     executable = 'python'
-            cmd = [executable, self.cache.opencv_home + '/modules/python/test/test.py', '--repo', self.cache.opencv_home, '-v'] + args
+            cmd = [executable, self.cache.opencv_home + '/modules/python/test/main.py', '--repo', self.cache.opencv_home, '-v'] + args
             module_suffix = '' if 'Visual Studio' not in self.cache.cmake_generator else '/' + self.cache.build_type
             env = {}
             env['PYTHONPATH'] = self.cache.opencv_build + '/lib' + module_suffix + os.pathsep + os.getenv('PYTHONPATH', '')
